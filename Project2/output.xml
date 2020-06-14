@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20200614 19:14:54.055" generator="Robot 3.2.1 (Python 2.7.18 on win32)">
+<suite source="C:\Users\212698421\test\Project2\TS1.robot" id="s1" name="TS1">
+<kw type="setup" name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Test suite started</arg>
+</arguments>
+<status status="PASS" endtime="20200614 19:14:55.173" starttime="20200614 19:14:55.172"></status>
+</kw>
+<test id="s1-t1" name="TC1">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>gc</arg>
+</arguments>
+<msg timestamp="20200614 19:14:55.174" level="INFO">Opening browser 'gc' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<status status="PASS" endtime="20200614 19:15:02.427" starttime="20200614 19:14:55.174"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=txtUsername</arg>
+<arg>${CREDENTIALS}[0]</arg>
+</arguments>
+<msg timestamp="20200614 19:15:02.432" level="INFO">Typing text 'Admin' into text field 'id=txtUsername'.</msg>
+<status status="PASS" endtime="20200614 19:15:02.660" starttime="20200614 19:15:02.431"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=txtPassword</arg>
+<arg>&amp;{LOGIN}[password]</arg>
+</arguments>
+<msg timestamp="20200614 19:15:02.661" level="WARN">Accessing variable items using '&amp;{LOGIN}[password]' syntax is deprecated. Use '${LOGIN}[password]' instead.</msg>
+<msg timestamp="20200614 19:15:02.664" level="INFO">Typing text 'admin123' into text field 'id=txtPassword'.</msg>
+<status status="PASS" endtime="20200614 19:15:02.821" starttime="20200614 19:15:02.661"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>name=Submit</arg>
+</arguments>
+<msg timestamp="20200614 19:15:02.823" level="INFO">Clicking button 'name=Submit'.</msg>
+<status status="PASS" endtime="20200614 19:15:06.368" starttime="20200614 19:15:02.823"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20200614 19:15:09.911" starttime="20200614 19:15:06.371"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>%{username} is working on %{os}</arg>
+</arguments>
+<status status="PASS" endtime="20200614 19:15:09.914" starttime="20200614 19:15:09.912"></status>
+</kw>
+<tags>
+<tag>regression</tag>
+<tag>TC1</tag>
+</tags>
+<status status="PASS" endtime="20200614 19:15:09.916" critical="yes" starttime="20200614 19:14:55.173"></status>
+</test>
+<kw type="teardown" name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Test suite completed</arg>
+</arguments>
+<status status="PASS" endtime="20200614 19:15:09.929" starttime="20200614 19:15:09.927"></status>
+</kw>
+<status status="PASS" endtime="20200614 19:15:09.929" starttime="20200614 19:14:54.060"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">regression</stat>
+<stat fail="0" pass="1">TC1</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="TS1" pass="1">TS1</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20200614 19:15:02.661" level="WARN">Accessing variable items using '&amp;{LOGIN}[password]' syntax is deprecated. Use '${LOGIN}[password]' instead.</msg>
+</errors>
+</robot>
